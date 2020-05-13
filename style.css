@@ -1,0 +1,221 @@
+* {
+    padding        : 0;
+    margin         : 0;
+    box-sizing     : border-box;
+    list-style     : none;
+    text-decoration: none;
+}
+
+#header {
+    position             : fixed;
+    width                : 100%;
+    height               : 40px;
+    overflow             : hidden;
+    top                  : 0;
+    display              : grid;
+    grid-template-columns: repeat(1, 300px);
+    justify-content      : flex-end;
+    margin-left          : auto;
+    background-color     : rgb(58, 58, 59);
+    z-index              : 500;
+}
+
+body {
+    background-color: #acacac;
+    font-family     : Arial;
+}
+
+.nav-ul {
+    list-style           : none;
+    display              : grid;
+    grid-template-columns: repeat(4, auto);
+    align-items          : center;
+}
+
+.nav-ul li {
+    background-color: rgb(58, 58, 59);
+    display         : inline-block;
+    justify-content : center;
+    height          : 100%;
+    padding         : 6px;
+    text-align      : center;
+}
+
+.nav-ul a {
+    font-weight    : 500;
+    font-size      : 20px;
+    color          : #f1d59d;
+    text-decoration: none;
+}
+
+.nav-ul li:hover {
+    color           : black;
+    background-color: rgb(36, 36, 36);
+}
+
+#welcome-section {
+    background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/997443/pexels-photo-997443.jpeg?cs=srgb&dl=grayscale-photo-of-volcano-997443.jpg&fm=jpg");
+    height               : 100vh;
+    background-attachment: fixed;
+    background-position  : center;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    color                : #fdcd6d;
+    text-align           : center;
+    z-index              : 1;
+}
+
+.welcome-section-div {
+    font-size: 50px;
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+}
+
+#projects {
+    background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg?cs=srgb&dl=black-and-white-clouds-dawn-dock-276374.jpg&fm=jpg");
+    height               : 100vh;
+    background-attachment: fixed;
+    background-position  : center;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    color                : #fdcd6d;
+    z-index              : 2;
+}
+
+.project-div {
+    font-size : 50px;
+    position  : absolute;
+    top       : 150%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+.project-tile {
+    display              : grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-gap             : 20px;
+    color                : red;
+}
+
+.project-tile li {
+    padding: 30px;
+}
+
+.project-tile li a {
+    font-size: 30px;
+    color    : #f1d59d;
+}
+
+#contact {
+    background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/1038935/pexels-photo-1038935.jpeg?cs=srgb&dl=grayscale-photo-of-road-1038935.jpg&fm=jpg");
+    height               : 100vh;
+    background-attachment: fixed;
+    background-position  : center;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    color                : #fdcd6d;
+}
+
+.contact-div {
+    font-size : 50px;
+    position  : absolute;
+    top       : 250%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+    text-align: center;
+}
+
+#contact-tile {
+    display              : grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content      : center;
+}
+
+#profile-link {
+    font-size: 40px;
+    color    : #f1d59d;
+}
+
+a {
+    font-weight    : 500;
+    font-size      : 16px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        margin: 0 auto;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    #projects {
+        background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg?cs=srgb&dl=black-and-white-clouds-dawn-dock-276374.jpg&fm=jpg");
+        height               : 150vh;
+        background-attachment: fixed;
+        background-position  : center;
+        background-repeat    : no-repeat;
+        background-size      : cover;
+        color                : #fdcd6d;
+        z-index              : 2;
+    }
+
+    .projects-div {
+        padding: 6rem 1rem;
+        width  : 100vh;
+    }
+
+    .project-div {
+        font-size: 30px;
+        margin   : 30vh 0 0 0;
+    }
+
+    .project-tile {
+        display              : grid;
+        grid-template-columns: repeat(1, 200px);
+        grid-gap             : 10px;
+        color                : red;
+        justify-content      : center;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .project-tile li {
+        display              : grid;
+        grid-template-columns: 10px;
+        text-align           : center;
+        padding              : 20px;
+    }
+
+    .project-tile li a {
+        font-size : 20px;
+        color     : #ca8700;
+        text-align: center;
+    }
+
+    .contact-div>h2 {
+        font-size: 4rem;
+    }
+
+    .contact-div {
+        font-size : 30px;
+        text-align: center;
+        margin    : 30vh 0 0 0;
+    }
+
+    #contact-tile {
+        grid-template-columns: repeat(1, 300px);
+        grid-gap             : 20px;
+    }
+}
