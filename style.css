@@ -39,6 +39,7 @@ body {
     height          : 100%;
     padding         : 6px;
     text-align      : center;
+    border-radius: 1rem;
 }
 
 .nav-ul a {
@@ -54,6 +55,7 @@ body {
 }
 
 #welcome-section {
+    position: relative;
     background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/997443/pexels-photo-997443.jpeg?cs=srgb&dl=grayscale-photo-of-volcano-997443.jpg&fm=jpg");
     height               : 100vh;
     background-attachment: fixed;
@@ -74,6 +76,7 @@ body {
 }
 
 #projects {
+    position: relative;
     background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg?cs=srgb&dl=black-and-white-clouds-dawn-dock-276374.jpg&fm=jpg");
     height               : 100vh;
     background-attachment: fixed;
@@ -87,14 +90,15 @@ body {
 .project-div {
     font-size : 50px;
     position  : absolute;
-    top       : 150%;
+    top       : 50%;
     left      : 50%;
     transform : translate(-50%, -50%);
     text-align: center;
 }
 
 img {
-    width: 300px;
+    width: 280px;
+    margin: 0 auto;
 }
 
 .project-tile {
@@ -105,15 +109,20 @@ img {
 }
 
 .project-tile li {
-    padding: 30px;
+    padding: 10px 0;
+    border-radius: 1rem
+}
+.project-tile li:hover {
+    background-color: #75726c;
 }
 
 .project-tile li a {
-    font-size: 30px;
+    font-size: 20px;
     color    : #f1d59d;
 }
 
 #contact {
+    position: relative;
     background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/1038935/pexels-photo-1038935.jpeg?cs=srgb&dl=grayscale-photo-of-road-1038935.jpg&fm=jpg");
     height               : 100vh;
     background-attachment: fixed;
@@ -126,7 +135,7 @@ img {
 .contact-div {
     font-size : 50px;
     position  : absolute;
-    top       : 250%;
+    top       : 50%;
     left      : 50%;
     transform : translate(-50%, -50%);
     text-align: center;
@@ -139,10 +148,14 @@ img {
 }
 
 #profile-link {
+    padding: 5px;
+    border-radius: 0.5em;
     font-size: 40px;
     color    : #f1d59d;
 }
-
+#profile-link:hover {
+    background-color:#75726c;
+}
 a {
     font-weight    : 500;
     font-size      : 16px;
@@ -158,49 +171,44 @@ a {
         justify-content: center;
     }
 
-    #projects {
-        background           : linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .2)), url("https://images.pexels.com/photos/276374/pexels-photo-276374.jpeg?cs=srgb&dl=black-and-white-clouds-dawn-dock-276374.jpg&fm=jpg");
-        height               : 150vh;
-        background-attachment: fixed;
-        background-position  : center;
-        background-repeat    : no-repeat;
-        background-size      : cover;
-        color                : #fdcd6d;
-        z-index              : 2;
+    .project-div {
+        font-size : 50px;
+        position  : absolute;
+        top       : 50%;
+        left      : 50%;
+        transform : translate(-50%, -50%);
+        text-align: center;
     }
 
-    .projects-div {
-        padding: 6rem 1rem;
-        width  : 100vh;
-    }
 
     .project-div {
         font-size: 30px;
-        margin   : 30vh 0 0 0;
     }
 
     .project-tile {
         display              : grid;
-        grid-template-columns: repeat(1, 200px);
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
         grid-gap             : 10px;
-        color                : red;
         justify-content      : center;
     }
 
     img {
-        width: 200px;
+        width: 150px;
     }
 
     .project-tile li {
-        display              : grid;
-        grid-template-columns: 10px;
-        text-align           : center;
-        padding              : 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #75726c;
+        padding: 0 0;
+        z-index: 3;
     }
 
     .project-tile li a {
-        font-size : 20px;
-        color     : #ca8700;
+        font-size : 12px;
+        color     : #ffffff;
         text-align: center;
     }
 
@@ -211,7 +219,6 @@ a {
     .contact-div {
         font-size : 30px;
         text-align: center;
-        margin    : 30vh 0 0 0;
     }
 
     #contact-tile {
