@@ -99,6 +99,7 @@ body {
 img {
     width: 280px;
     margin: 0 auto;
+    border-radius: 1em;
 }
 
 .project-tile {
@@ -189,26 +190,20 @@ a {
         display              : grid;
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(2, auto);
-        grid-gap             : 10px;
+        grid-gap             : 5vw;
         justify-content      : center;
     }
 
     img {
-        width: 150px;
-    }
-
-    .project-tile li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #75726c;
-        padding: 0 0;
-        z-index: 3;
+        width: 200px;
     }
 
     .project-tile li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size : 12px;
-        color     : #ffffff;
+        color     : #f1d59d;
         text-align: center;
     }
 
